@@ -1,24 +1,22 @@
-@import '../abstracts/variables';
+@import "../abstracts/variables";
 
 .btn {
-    @include for-desktop {
-        display: flex;
-        justify-content: center;
-        align-items: center;;
-        text-transform: uppercase;
-        color: $primary-color;
-        padding: 8px 16px;
-        line-height: 17px;
-        border: 1px solid $primary-color;
-        border-radius: 5px;
-        background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: $primary-color;
+  padding: 8px 16px;
+  line-height: 17px;
+  border: 1px solid $primary-color;
+  border-radius: 5px;
+  background-color: transparent;
 
-        &:hover {
-            cursor: pointer;
-        }
+  &:hover {
+    cursor: pointer;
+  }
 
-        &__img {
-            margin-right: 15px;
-        }
-    }
+  &__img {
+    margin-right: 15px;
+  }
 }

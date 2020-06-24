@@ -1,8 +1,4 @@
-@import '../abstracts/mixins';
-
-@include for-desktop {
-    .container {
-        max-width: 1140px;
-        margin: 0 auto;
-    }
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
 }

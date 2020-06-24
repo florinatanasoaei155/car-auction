@@ -1,24 +1,22 @@
-@include for-desktop {
-    .order {
-        padding-left: 25px;
-        height: 100%;
+.order {
+  padding-left: 25px;
+  height: 100%;
 
-        select {
-            height: 100%;
-            border: none;
-            border-bottom: 2px solid grey;
-            padding-right: 15px;
+  select {
+    height: 100%;
+    border: none;
+    border-bottom: 2px solid grey;
+    padding-right: 15px;
 
-            &:hover {
-                cursor: pointer;
-            }
-
-            &:focus,
-            &:active,
-            &:visited {
-                border: none;
-                outline: none;
-            }
-        }
+    &:hover {
+      cursor: pointer;
     }
+
+    &:focus,
+    &:active,
+    &:visited {
+      border: none;
+      outline: none;
+    }
+  }
 }

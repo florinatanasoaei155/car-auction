@@ -1,47 +1,54 @@
-@import '../abstracts/variables';
+@import "../abstracts/variables";
 
-
-@include for-desktop {
-    nav {
-        display: flex;
-        align-items: center;
-    }
-
-    .navbar {
-        display: flex;
-        list-style: none;
-        margin: 0;
-    
-        &__link {
-            text-decoration: none;
-            color: $secondary-color;
-            position: relative;     
-            padding: 8px 16px;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-
-            &--active {
-                color: $primary-color;
-
-                &:after {
-                    content: '';
-                    position: absolute;
-                    bottom: 0;
-                    width: 35px;
-                    height: 2px;
-                    background-color: $primary-color;
-                    transform: translateX(-50%);
-                    left: 50%;
-                }
-            }
-        }
-    
-    }
-    
-    .flag {
-        padding: 8px 32px 8px 16px;
-        @include flex-center-align;
-    }
+nav {
+  display: flex;
+  align-items: center;
 }
 
+.navbar {
+  display: flex;
+  list-style: none;
+  margin: 0;
 
+  &__link {
+    text-decoration: none;
+    color: $secondary-color;
+    position: relative;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+
+    &:hover {
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 35px;
+        height: 2px;
+        background-color: $secondary-color;
+        transform: translateX(-50%);
+        left: 50%;
+      }
+    }
+
+    &--active {
+      color: $primary-color;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 35px;
+        height: 2px;
+        background-color: $primary-color;
+        transform: translateX(-50%);
+        left: 50%;
+      }
+    }
+  }
+}
+
+.flag {
+  padding: 8px 32px 8px 16px;
+  @include flex-center-align;
+}

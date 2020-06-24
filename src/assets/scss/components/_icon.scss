@@ -1,11 +1,9 @@
+@import '../abstracts/mixins';
 
+.icon {
+  @include flex-center-align;
 
-@include for-desktop {
-    .icon {
-        @include flex-center-align;
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
+  &:hover {
+    cursor: pointer;
+  }
 }

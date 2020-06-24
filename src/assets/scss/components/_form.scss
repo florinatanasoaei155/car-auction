@@ -1,7 +1,5 @@
-@include for-desktop {
-    .form {
-        &__input {
-            width: 100%;
-        }
-    }
+.form {
+  &__input {
+    width: 100%;
+  }
 }
