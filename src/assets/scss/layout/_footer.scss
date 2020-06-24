@@ -1,0 +1,56 @@
+@import '../abstracts/variables';
+
+.page-footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &__container {
+        display: flex;
+
+        > div {
+            flex-basis: 25%;
+            @include flex-center-align;
+        }
+
+        .support {
+            
+
+            p {
+                padding-left: 30px;
+                text-transform: uppercase;
+                text-align: center;
+            }
+        }
+
+        nav {
+            flex-basis: 25%;
+            display: flex;
+            justify-content: center;
+
+            ul {
+                list-style-type: none;
+                display: flex;
+
+                li {
+                    @include flex-center-align;
+
+                    a {
+                        font-size: 0.8rem;
+                        padding: 4px 8px;
+                        display: block;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+
+        .social-media {
+            &__icon {
+                padding: 10px;
+            }
+        }
+    }
+}
+

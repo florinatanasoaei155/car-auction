@@ -1,0 +1,7 @@
+@import '../abstracts/mixins';
+
+@include for-desktop {
+    .page-header {
+        padding: 16px 0;
+    }
+}

@@ -1,0 +1,5 @@
+@include for-desktop {
+    .logo {
+        @include flex-center-align;
+    }
+}

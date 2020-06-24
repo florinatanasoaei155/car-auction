@@ -1,0 +1,96 @@
+<header class="page-header">
+    <div class="container page-header__container">
+
+        <div class="row">
+            <div class="logo">
+                <img class="logo__img" src="../../assets/images/header-logo.png" alt="Logo">
+            </div>
+            <nav>
+                <ul class="navbar">
+                    <li class="navbar__item">
+                        <a class="navbar__link navbar__link--active" href="#">Vehicles</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="#">Faqs</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="#">Contact us</a>
+                    </li>
+                </ul>
+                <div class="flag">
+                    <img src="../../assets/images/flag.png" alt="United Arab Emirates - Flag">
+                </div>
+                <div class="login">
+                    <button class="btn btn__default">
+                        <img class="btn__img" src="../../assets/images/user-icon.png" alt="User icon">
+                        Sign in
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <div class="row">
+            <div class="search">
+                <div class="icon">
+                    <img class="icon__img" src="../../assets/images/search-icon.png" alt="Search icon">
+                </div>
+
+                <div class="search__form form">
+                    <input class="form__input" type="text" list="products" name="search" placeholder="Search products" id="search">
+                    <datalist id="products">
+                        <option value="Toyota Camry SE"></option>
+                        <option value="Toyota Camry XSE"></option>
+                    </datalist> 
+                </div>
+
+                <div class="order">
+                    <select name="order" id="order">
+                        <option value="1">By time</option>
+                    </select>
+                </div>
+
+                <div class="view-type">
+                    <div class="view-type__icon icon">
+                        <img src="../../assets/images/grid-view-icon.png" alt="Grid view icon">
+                    </div>
+                    <div class="view-type__icon icon">
+                        <img src="../../assets/images/list-view-icon.png" alt="List view icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <form class="form filter">
+                
+                <div class="form-control filter__item">
+                    <select name="Damage type" id="damage-type">
+                        <option value="0">Damage type</option>
+                    </select>
+                </div>
+                
+                <div class="form-control filter__item">
+                    <input type="checkbox" name="Favorites" id="favorites">
+                    <label for="favorites">Show Favorites</label>
+                </div>
+
+                <div class="form-control filter__item">
+                    <input type="checkbox" name="Live auctions" id="live-auctions">
+                    <label for="live-auctions">Live auctions</label>
+                </div>
+
+                <div class="form-control filter__item">
+                    <input type="checkbox" name="Coming soon" id="coming-soon">
+                    <label for="coming-soon">Coming soon</label>
+                </div>
+
+                <div class="form-control filter__item">
+                    <input type="checkbox" name="Ended auctions" id="ended-auctions" checked>
+                    <label for="ended-auctions">Ended auctions</label>
+                </div>
+                
+            </form>
+        </div>
+
+    </div>
+</header>

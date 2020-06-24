@@ -1,0 +1,17 @@
+@mixin for-desktop {
+    @media (min-width: 1200px) { @content; }
+}
+
+@mixin flex-center-align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin roboto-condensed-font {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+@mixin poppins-bold-font {
+    font-family: 'Poppins', sans-serif;
+}

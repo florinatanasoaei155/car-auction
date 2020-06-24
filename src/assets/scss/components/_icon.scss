@@ -1,0 +1,11 @@
+
+
+@include for-desktop {
+    .icon {
+        @include flex-center-align;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
