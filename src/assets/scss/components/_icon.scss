@@ -1,9 +1,0 @@
-@import '../abstracts/mixins';
-
-.icon {
-  @include flex-center-align;
-
-  &:hover {
-    cursor: pointer;
-  }
-}

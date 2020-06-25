@@ -2,7 +2,8 @@
     <div class="card__header">
         <div class="card__date"></div>
         <figure class="card__figure">
-            <img src="#" alt="Toyota Camry SE">
+            <img class="img--fluid" [src]="imgSrc" [alt]="imgAlt">
+            <figcaption>{{carName}}</figcaption>
         </figure>
     </div>
     <div class="card__body">
@@ -50,7 +51,7 @@
         </div>
 
         <div class="card__row">
-            <button class="btn green-btn">View 3 bids</button>
+            <button class="btn btn__green">View 3 bids</button>
         </div>
     </div>
     <div class="card__footer"></div>

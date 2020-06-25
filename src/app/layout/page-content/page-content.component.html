@@ -1,0 +1,81 @@
+<div class="page-content">
+  <div class="container page-content__container">
+    <aside class="sidebar">
+      <form class="aside-filter" action="#">
+        <div class="form-control">
+          <select name="Make" id="make">
+            <option value="0">Make</option>
+          </select>
+        </div>
+
+        <div class="form-control">
+          <select name="Model" id="model">
+            <option value="0">Model</option>
+          </select>
+        </div>
+
+        <div class="form-control">
+          <select name="City" id="city">
+            <option value="0">City</option>
+          </select>
+        </div>
+
+        <div class="form-control">
+          <select name="From" id="from">
+            <option value="0">From</option>
+          </select>
+
+          <select name="To" id="to">
+            <option value="0">To</option>
+          </select>
+        </div>
+
+        <div class="form-control">
+          <input type="text" name="Auction ID" id="auction-id" placeholder="Auction ID">
+        </div>
+
+        <div class="form-control">
+          <label for="current-bid">Current bid</label>
+          <input type="range" id="current-bid" name="current-bid" min="0" max="10000">
+        </div>
+
+        <div class="form-control">
+          <button type="submit" class="btn btn__primary">
+            Search
+          </button>
+        </div>
+
+        <div class="form-control">
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </aside>
+
+    <main>
+      <div class="products">
+        <div class="column">
+          <app-product
+            imgSrc="assets/images/car-1@2x.png"
+            carName="Toyota Camry SE"
+          ></app-product>
+          <app-product></app-product>
+          <app-product></app-product>
+        </div>
+        <div class="column">
+          <app-product></app-product>
+          <app-product></app-product>
+          <app-product></app-product>
+        </div>
+        <div class="column">
+          <app-product></app-product>
+          <app-product></app-product>
+          <app-product></app-product>
+        </div>
+      </div>
+
+      <div class="pagination">
+
+      </div>
+    </main>
+  </div>
+</div>

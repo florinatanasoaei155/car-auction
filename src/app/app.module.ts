@@ -2,10 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { PageContentComponent } from './page-content/page-content.component';
-import { FooterComponent } from './footer/footer.component';
-import { ProductComponent } from './page-content/product/product.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { PageContentComponent } from './layout/page-content/page-content.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import { ButtonComponent } from './shared/button/button.component';
+import { ProductComponent } from './shared/product/product.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ProductComponent } from './page-content/product/product.component';
     HeaderComponent,
     PageContentComponent,
     FooterComponent,
-    ProductComponent
+    ProductComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule
