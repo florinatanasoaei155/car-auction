@@ -5,6 +5,10 @@
   padding-top: $spacing-4;
   padding-bottom: $spacing-4;
 
+  &__logo {
+    padding: 0 $spacing-4;
+  }
+
   &__container {
     display: flex;
 
@@ -14,23 +18,29 @@
     }
 
     .support {
+      padding: 0 $spacing-4;
+      border-right: 1px solid $secondary-color;
       p {
-        padding-left: $spacing-4;
         text-transform: uppercase;
         text-align: center;
         font-size: $font-size-very-small;
         line-height: $line-height-very-small;
       }
+      
     }
 
     nav {
       flex-basis: 25%;
       display: flex;
       justify-content: center;
+      border-left: 1px solid $secondary-color;
+      border-right: 1px solid $secondary-color;
+      padding: 0 $spacing-4;
 
       ul {
         list-style-type: none;
         display: flex;
+        padding-left: 0;
 
         li {
           @include flex-center-align;
@@ -50,6 +60,8 @@
     }
 
     .social-media {
+      padding: 0 $spacing-4;
+
       &__icon {
         padding: $spacing-1;
       }
