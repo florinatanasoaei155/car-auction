@@ -1,6 +1,7 @@
 # Car Auction
 
 Tools: Font-Awesome, Scss
+
 Tech Stack: Angular, TypeScript, HTML5, CSS3
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
