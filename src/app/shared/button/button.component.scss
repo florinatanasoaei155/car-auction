@@ -6,17 +6,61 @@
   align-items: center;
   text-transform: uppercase;
   color: $primary-color;
-  padding: 8px 16px;
+  padding: $spacing-1 $spacing-2;
   line-height: 17px;
   border: 1px solid $primary-color;
   border-radius: 5px;
   background-color: transparent;
+  margin: 0 auto;
 
   &:hover {
     cursor: pointer;
+    color: $default-color;
+    background-image: $violet-gradient;
   }
 
-  &__img {
-    margin-right: 15px;
+  &:focus {
+    outline: none;
+  }
+
+  &--primary {
+    background-image: $violet-gradient;
+    color: $default-color;
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &--green {
+    background-color: $green-color;
+    color: $default-color;
+    text-transform: capitalize;
+    border: 1px solid $green-color;
+
+
+    &:hover {
+      background-color: transparent;
+      background-image: none;
+      color: $green-color;
+      border: 1px solid $green-color;
+
+    }
+  }
+
+  &--reset {
+    text-decoration: underline;
+    border: none;
+    color: $secondary-color;
+    padding: 0;
+
+    &:hover {
+      background: transparent;
+      color: $primary-color;
+    }
+  }
+
+  i {
+    padding-right: $spacing-1;
   }
 }

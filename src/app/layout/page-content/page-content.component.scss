@@ -1,10 +1,14 @@
 @import '../../../assets/scss/abstracts/variables';
+@import '../../../assets/scss/abstracts/mixins';
 
 .page-content {
-  background-color: #e4f0fd;
+  background-color: $grey-color;
+  box-shadow:inset 0 0 3px 0 $secondary-color;
 
   &__container {
     display: flex;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   aside {
@@ -18,23 +22,41 @@
 
 .products {
   display: flex;
+
+  &__column {
+    padding: $spacing-2 0;
+  }
 }
 
 .sidebar {
-  padding-top: 20px;
+  padding-top: $spacing-2;
+  max-width: 270px;
+  padding-right: $spacing-1;
 
   form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: $default-color;
-    padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 3px 0 $primary-color;
+    box-shadow: 0 0 3px 0 $secondary-color;
+    padding: $spacing-4 $spacing-2 $spacing-2 $spacing-2;
+  }
+
+  label {
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+    @include poppins-font;
   }
 
   select,
   input {
     width: 100%;
     border: none;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid $grey-color;
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+    @include poppins-font;
 
     &:hover {
       cursor: pointer;
@@ -46,49 +68,41 @@
   }
 
   .form-control {
-    padding-bottom: 20px;
+    padding-bottom: $spacing-2;
+    width: 100%;
   }
 
   #from,
   #to {
     width: 50%;
   }
-
-  .btn--primary {
-    width: 100%;
-    padding: 8px 0;
-    border-radius: 5px;
-    border: none;
-    position: relative;
-    color: $default-color;
-    background-color: $primary-color;
-    position: relative;
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    &::before {
-      content: '\f002';
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      color: $default-color;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: -30px;
-    }
-  }
-  
-  button[type="reset"] {
-    &:hover {
-      cursor: pointer;
-    }
-  }
 }
 
-.aside-filter {
+.pagination {
+  width: 100%;
+  counter-reset: pagination;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding-bottom: $spacing-4;
+  justify-content: center;
+
+  .pagination__item {
+    width: $spacing-4;
+    height: $spacing-4;
+    background: transparent;
+    border-radius: 5px;
+    margin-right: $spacing-2;
+    @include flex-center-align;
+    border: 1px solid transparent;
+
+    &--active {
+      background-image: $violet-gradient;
+      color: $default-color;
+    }
+
+    &:hover {
+      color: $primary-color;
+      border: 1px solid $primary-color;
+      cursor: pointer;
+    }
+  }
 }

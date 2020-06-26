@@ -1,1 +1,4 @@
-<p>button works!</p>
+<button [class]="componentClass" [type]="btnType">
+  <i *ngIf="hasIcon" [class]="faIcon"></i>
+  {{text}}
+</button>

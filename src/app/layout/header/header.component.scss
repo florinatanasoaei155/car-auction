@@ -2,7 +2,13 @@
 @import '../../../assets/scss/abstracts/variables';
 
 .page-header {
-  padding: 16px 0;
+  padding: $spacing-4 0;
+}
+
+.nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav {
@@ -19,20 +25,18 @@ nav {
     text-decoration: none;
     color: $secondary-color;
     position: relative;
-    padding: 8px 16px;
+    padding: $spacing-1 $spacing-2;
     text-transform: uppercase;
-    font-size: 0.8rem;
+    font-size: $font-size-small;
 
     &:hover {
       &:after {
         content: "";
-        position: absolute;
+        @include absolute-center-align-horizontal;
         bottom: 0;
         width: 35px;
         height: 2px;
         background-color: $secondary-color;
-        transform: translateX(-50%);
-        left: 50%;
       }
     }
 
@@ -41,13 +45,11 @@ nav {
 
       &:after {
         content: "";
-        position: absolute;
+        @include absolute-center-align-horizontal;
+        background-color: $primary-color;
         bottom: 0;
         width: 35px;
         height: 2px;
-        background-color: $primary-color;
-        transform: translateX(-50%);
-        left: 50%;
       }
     }
   }
@@ -55,17 +57,19 @@ nav {
 
 .logo {
   @include flex-center-align;
+  max-width: 200px;
 }
 
 .order {
-  padding-left: 25px;
+  padding-left: $spacing-3;
   height: 100%;
+  margin-bottom: -4px;
 
   select {
     height: 100%;
     border: none;
-    border-bottom: 2px solid grey;
-    padding-right: 15px;
+    border-bottom: 2px solid $grey-color;
+    padding-right: $spacing-2;
 
     &:hover {
       cursor: pointer;
@@ -74,7 +78,6 @@ nav {
     &:focus,
     &:active,
     &:visited {
-      border: none;
       outline: none;
     }
   }
@@ -82,7 +85,7 @@ nav {
 
 
 .flag {
-  padding: 8px 32px 8px 16px;
+  padding: $spacing-1 $spacing-4 $spacing-1 $spacing-2;
   @include flex-center-align;
 }
 
@@ -93,18 +96,27 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  
+
+  .icon {
+    i {
+      font-size: 30px;
+    }
+  }
 
   &__form {
     flex: 1;
     height: 100%;
     display: flex;
     align-items: center;
-    padding-left: 25px;
+    padding-left: $spacing-3;
 
     input {
       height: 100%;
       border: none;
-      border-bottom: 2px solid grey;
+      border-bottom: 2px solid $grey-color;
+      font-size: $font-size-normal;
+      line-height: $line-height-normal;
 
       &:focus {
         border-bottom: 2px solid $secondary-color;
@@ -119,29 +131,45 @@ nav {
   align-items: center;
 
   &__icon {
-    padding-left: 25px;
+    padding-left: $spacing-3;
+    color: $primary-color;
   }
 }
 
 .filter {
-  display: flex;
+  display: inline-flex;
   justify-content: space-between;
   width: 100%;
-  padding-top: 32px;
+  padding-top: $spacing-4;
+
+  .form-control {
+    display: flex;
+    align-items: center;
+  }
 
   &__item {
-    flex-grow: 1;
-    padding: 0 30px;
 
     input {
+      font-size: $font-size-normal;
+      line-height: $line-height-normal;
+
       &:hover {
         cursor: pointer;
       }
     }
 
     select {
+      border: none;
+      font-size: $font-size-normal;
+      line-height: $line-height-normal;
+      @include poppins-font;
+
       &:hover {
         cursor: pointer;
+      }
+
+      &:focus {
+        outline: none;
       }
     }
 

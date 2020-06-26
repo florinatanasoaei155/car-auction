@@ -4,10 +4,23 @@
     align-items: center;
 }
 
+@mixin absolute-center-align {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 50%);
+}
+
+@mixin absolute-center-align-horizontal {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @mixin roboto-condensed-font {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-@mixin poppins-bold-font {
+@mixin poppins-font {
     font-family: 'Poppins', sans-serif;
 }

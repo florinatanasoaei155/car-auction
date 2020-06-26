@@ -1,24 +1,123 @@
 @import '../../../assets/scss/abstracts/variables';
+@import '../../../assets/scss/abstracts/mixins';
 
 .card {
-  padding: 10px;
+  padding: 0 $spacing-1;
+  margin-bottom: $spacing-2;
+
+  p {
+    font-size: $font-size-normal;
+    line-height: $line-height-normal;
+    margin: 0;
+  }
+
+  &__wrapper {
+    background-color: $default-color;
+    border-radius: 5px;
+    padding: $spacing-1 $spacing-1 $spacing-2 $spacing-1;
+    box-shadow: 0 0 3px 0 $secondary-color; 
+  }
+
+  &__header {
+    padding-bottom: $spacing-1;
+  }
+
+  &__date {
+    padding-top: $spacing-1;
+    padding-bottom: $spacing-1;
+    width: 100%;
+    border-radius: 5px;
+    text-align: center;
+    background-image: $red-gradient;
+    color: $default-color;
+    margin-bottom: $spacing-1;
+  }
+
+  &__figure {
+    margin: 0;
+    position: relative;
+    
+
+    figcaption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h3 {
+        margin: 0;
+      }
+    }
+
+    .icon {
+      position: absolute;
+      color: $yellow-color;
+
+      &.favorite {
+        top: $spacing-1;
+        right: $spacing-1;
+      }
+
+      &.add-auction-btn {
+        top: 150px;
+        right: $spacing-1;
+      }
+    }
+  }
 
   &__row {
     width: 100%;
+    padding: $spacing-1 0;
+
+    &:nth-child(1) {
+      border-bottom: 1px solid $grey-color;
+    }
+
+    &:nth-child(2) {
+      border-bottom: 1px solid $grey-color;
+    }
   }
 
   &__body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-top: 1px solid $grey-color;
+
+    &__icon {
+      color: $green-color;
+      padding-right: $spacing-1;
+    }
   }
 
-  .btn--green {
-    border-radius: 5px;
-    background-color: green;
-    border: 0;
-    padding: 8px 16px;
-    color: $default-color;
-    width: 100%;
+  .location {
+    display: flex;
+    align-items: center;
+
+    .card__body__icon {
+      padding-right: $spacing-2;
+    }
+
+    p {
+      font-weight: 500;
+    }
+  }
+
+  .price {
+    display: flex;
+    align-items: center;
+
+    p {
+      @include roboto-condensed-font;
+      font-size: $font-size-medium;
+      line-height: $line-height-medium;
+    }
+
+    .currency {
+      color: $green-color;
+      text-transform: uppercase;
+      font-size: $font-size-small;
+      line-height: $line-height-small;
+      @include roboto-condensed-font;
+    }
   }
 }

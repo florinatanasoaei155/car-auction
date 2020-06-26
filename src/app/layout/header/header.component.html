@@ -1,14 +1,13 @@
 <header class="page-header">
     <div class="container page-header__container">
-
-        <div class="row">
+        <div class="row nav-row">
             <div class="logo">
-                <img class="logo__img" src="../../assets/images/header-logo.png" alt="Logo">
+                <img class="img--fluid logo__img" src="../../assets/images/header-logo@2x.png" alt="Logo">
             </div>
             <nav>
-                <ul class="navbar">
+                <ul class="navbar" (click)="menuClick($event)">
                     <li class="navbar__item">
-                        <a class="navbar__link navbar__link--active" href="#">Vehicles</a>
+                        <a class="navbar__link navbar__link--active" href="#" >Vehicles</a>
                     </li>
                     <li class="navbar__item">
                         <a class="navbar__link" href="#">Faqs</a>
@@ -21,10 +20,12 @@
                     <img src="../../assets/images/flag.png" alt="United Arab Emirates - Flag">
                 </div>
                 <div class="login">
-                    <button class="btn btn__default">
-                        <i class="fa fa-user"></i>
-                        Sign in
-                    </button>
+                    <app-button
+                      text="Sign in"
+                      faIcon="user"
+                      variant="default"
+                      btnType="button"
+                    ></app-button>
                 </div>
             </nav>
         </div>

@@ -1,7 +1,7 @@
 <div class="page-content">
   <div class="container page-content__container">
     <aside class="sidebar">
-      <form class="aside-filter" action="#">
+      <form action="#">
         <div class="form-control">
           <select name="Make" id="make">
             <option value="0">Make</option>
@@ -40,41 +40,83 @@
         </div>
 
         <div class="form-control">
-          <button type="submit" class="btn btn__primary">
-            Search
-          </button>
+          <app-button
+            btnType="submit"
+            variant="primary"
+            text="Search"
+            faIcon="search"
+            hasFullWidth="true"
+          ></app-button>
         </div>
 
         <div class="form-control">
-          <button type="reset">Reset</button>
+          <app-button
+            btnType="reset"
+            variant="reset"
+            text="Reset"
+          >
+          </app-button>
         </div>
       </form>
     </aside>
 
     <main>
       <div class="products">
-        <div class="column">
-          <app-product
-            imgSrc="assets/images/car-1@2x.png"
-            carName="Toyota Camry SE"
+        <div class="column products__column">
+          <ng-container *ngFor="let product of firstColumnProducts">
+            <app-product 
+              [imgSrc]="product.imgSrc"
+              [carName]="product.carName"
+              [imgAlt]="product.imgAlt"
+              [date]="product.date"
+              [views]="product.views"
+              [location]="product.location"
+              [oldPrice]="product.oldPrice"
+              [currentPrice]="product.currentPrice"
+              [year]="product.year"
           ></app-product>
-          <app-product></app-product>
-          <app-product></app-product>
+          </ng-container>
         </div>
-        <div class="column">
-          <app-product></app-product>
-          <app-product></app-product>
-          <app-product></app-product>
+        <div class="column products__column">
+          <ng-container *ngFor="let product of secondColumnProducts">
+            <app-product
+              [imgSrc]="product.imgSrc"
+              [carName]="product.carName"
+              [imgAlt]="product.imgAlt"
+              [date]="product.date"
+              [views]="product.views"
+              [location]="product.location"
+              [oldPrice]="product.oldPrice"
+              [currentPrice]="product.currentPrice"
+              [year]="product.year"
+          ></app-product>
+          </ng-container>
         </div>
-        <div class="column">
-          <app-product></app-product>
-          <app-product></app-product>
-          <app-product></app-product>
+        <div class="column products__column">
+          <ng-container *ngFor="let product of thirdColumnProducts">
+            <app-product
+              [imgSrc]="product.imgSrc"
+              [carName]="product.carName"
+              [imgAlt]="product.imgAlt"
+              [date]="product.date"
+              [views]="product.views"
+              [location]="product.location"
+              [oldPrice]="product.oldPrice"
+              [currentPrice]="product.currentPrice"
+              [year]="product.year"
+          ></app-product>
+          </ng-container>
         </div>
       </div>
 
       <div class="pagination">
-
+        <div class="pagination__item pagination__item--active">1</div>
+        <div class="pagination__item">2</div>
+        <div class="pagination__item">3</div>
+        <div class="pagination__item">4</div>
+        <div class="pagination__item">5</div>
+        <div class="pagination__item">6</div>
+        <div class="pagination__item">7</div>
       </div>
     </main>
   </div>

@@ -12,4 +12,11 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  menuClick(event: Event): void {
+    // Remove old active element
+    (<HTMLAnchorElement>(<HTMLUListElement>event.currentTarget).querySelectorAll('.navbar__link--active')[0]).classList.remove('navbar__link--active');
+    // Add current active element
+    (<HTMLAnchorElement>event.srcElement).classList.add('navbar__link--active');
+  }
+
 }

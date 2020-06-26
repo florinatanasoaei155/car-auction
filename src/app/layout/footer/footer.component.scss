@@ -2,8 +2,12 @@
 @import "../../../assets/scss/abstracts/variables";
 
 .page-footer {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: $spacing-4;
+  padding-bottom: $spacing-4;
+
+  &__logo {
+    max-width: 200px;
+  }
 
   &__container {
     display: flex;
@@ -15,7 +19,7 @@
 
     .support {
       p {
-        padding-left: 30px;
+        padding-left: $spacing-4;
         text-transform: uppercase;
         text-align: center;
       }
@@ -34,8 +38,9 @@
           @include flex-center-align;
 
           a {
-            font-size: 0.8rem;
-            padding: 4px 8px;
+            font-size: $font-size-small;
+            line-height: $line-height-small;
+            padding: $spacing-1 $spacing-2;
             display: block;
             text-decoration: none;
             text-transform: uppercase;
@@ -47,7 +52,7 @@
 
     .social-media {
       &__icon {
-        padding: 10px;
+        padding: $spacing-1;
       }
     }
   }

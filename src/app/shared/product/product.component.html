@@ -1,58 +1,82 @@
 <div class="card">
+  <div class="card__wrapper">
     <div class="card__header">
-        <div class="card__date"></div>
-        <figure class="card__figure">
-            <img class="img--fluid" [src]="imgSrc" [alt]="imgAlt">
-            <figcaption>{{carName}}</figcaption>
-        </figure>
+      <div class="card__date">
+        {{date}}
+      </div>
+      <figure class="card__figure">
+        <span class="icon favorite">
+          <i class="fa fa-star"></i>
+        </span>
+        <img class="img--fluid" [src]="imgSrc" [alt]="imgAlt">
+        <span class="icon add-auction-btn">
+          <i class="fa fa-gavel"></i>
+        </span>
+        <figcaption>
+          <h3>{{carName}}</h3>
+          <small>{{year}}</small>
+        </figcaption>
+      </figure>
     </div>
     <div class="card__body">
-        <div class="card__row">
-            <div class="accident">
-                <div class="icon"></div>
-                <span>Accident</span>
-            </div>
-            <div class="views">
-                <div class="icon"></div>
-                <span>Nr. of views</span>
-            </div>
+      <div class="row card__row">
+        <div class="column">
+          <span class="icon card__body__icon">
+            <i class="fa fa-car"></i>
+          </span>
+          <span>Accident</span>
         </div>
-        <div class="card__row">
-            <div class="location">
-                <div class="icon"></div>
-                <div class="text">
-                    <span>Location</span>
-                    <p>Riyadh Yard, Saudi Arabia</p>
-                </div>
-            </div>
+        <div class="column">
+          <span class="icon card__body__icon">
+            <i class="fa fa-eye"></i>
+          </span>
+          <span>{{views}} views</span>
         </div>
+      </div>
+      <div class="row card__row">
+        <div class="location">
+          <span class="icon card__body__icon">
+            <i class="fa fa-map-marker"></i>
+          </span>
+          <div class="text">
+            <small>Location</small>
+            <p>{{location}}</p>
+          </div>
+        </div>
+      </div>
 
-        <div class="card__row">
-            <div class="old-price">
-                <div class="icon"></div>
-                <div class="text">
-                    <span>Sold for</span>
-                    <div class="price">
-                        23,911 SAR
-                    </div>
-                </div>      
-            </div>
-            <div class="current-price">
-                <div class="icon">
-                    
-                </div>
-                <div class="text">
-                    <span>Buy now</span>
-                    <div class="price">
-                        23,911 SAR
-                    </div>
-                </div>
-            </div>
+      <div class="row card__row">
+        <div class="column price">
+          <span class="icon card__body__icon">
+            <i class="fa fa-gavel"></i>
+          </span>
+          <div class="text">
+            <small>Sold for</small>
+            <p>
+              {{oldPrice}} <span class="currency">SAR</span>
+            </p>
+          </div>
         </div>
+        <div class="column price">
+          <span class="icon card__body__icon">
+            <i class="fa fa-money"></i>
+          </span>
+          <div class="text">
+            <small>Buy now</small>
+            <p>
+              {{currentPrice}} <span class="currency">SAR</span>
+            </p>
+          </div>
+        </div>
+      </div>
 
-        <div class="card__row">
-            <button class="btn btn__green">View 3 bids</button>
+      <div class="row card__row">
+        <div class="column">
+          <app-button text="View 3 bids" variant="green" btnType="button" hasFullWidth="true"></app-button>
         </div>
+      </div>
     </div>
-    <div class="card__footer"></div>
+    <div class="row card__footer"></div>
+  </div>
+
 </div>
