@@ -209,15 +209,47 @@ nav {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked {
+      &~ .checkmark {
+        background-image: $violet-gradient;
+        &:after {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    input {
+      &~ .checkmark {
+        background-color: #ccc;
+      }
+    }
+  }
+
+  .checkmark {
+    &:after {
+      left: 7px;
+      top: 3px;
+      width: 4px;
+      height: 8px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
 }
 
-.label__container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
 
 .checkmark {
   position: absolute;
@@ -228,34 +260,10 @@ nav {
   width: 20px;
   background-color: #eee;
   border-radius: 5px;
-}
 
-.label__container:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-
-.label__container input:checked ~ .checkmark {
-  background-image: $violet-gradient;
-}
-
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-.label__container input:checked ~ .checkmark:after {
-  display: block;
-}
-
-.label__container .checkmark:after {
-  left: 7px;
-  top: 3px;
-  width: 4px;
-  height: 8px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+  &:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
 }
