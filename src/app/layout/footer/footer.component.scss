@@ -64,6 +64,22 @@
 
       &__icon {
         padding: $spacing-1;
+        font-size: $font-size-big;
+        line-height: $line-height-big;
+      }
+
+      &__instagram {
+        background: linear-gradient(to top,#FF0000, #FF00BB);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      &__facebook {
+        color: #2838CE;
+      }
+
+      &__twitter {
+        color: #03A9F4;
       }
     }
   }
